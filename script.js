@@ -1,19 +1,9 @@
-let userName = prompt('Login name', '');
-userName = String(userName);
-let password;
-
-if(userName === 'Admin'){
-    password = prompt('Enter your password', '');
-    if(password === 'TheMaster'){
-        alert('Welcome');
-    } else if (password == '' || password === null) {
-        alert('Canceled');
+for(let userNum = +prompt('Enter a number', '');;){
+    if(userNum < 100){
+        alert('try again');
+        userNum = +prompt('Enter a number', '')
     } else {
-        alert('Wrong Password');
+        alert('great'); 
+        break;
     }
-
-} else if (userName === '' || userName === null) {
-    alert('Canceled')
-} else {
-    alert('I dont know');
 }
