@@ -1,12 +1,18 @@
-function truncate(str, maxlength){
-  if(str.length > maxlength){
-    let newStr = str.slice(0, maxlength) + '...';
-    alert(newStr);
-  } else {
-    alert(str);
+function sumInput(){
+  let array = [];
+  let finalSum = 0;
+  let userInput;
+  do {
+    userInput = prompt('Enter numbers, and enter string when you wish to stop', '');
+    array.push(userInput);
+  } while (isFinite(userInput) && userInput !== null && userInput !== ''); 
+
+  for(let numbers of array){
+    if(isFinite(numbers)){
+    finalSum = +finalSum + +numbers;
+    }
   }
+  return finalSum;
 }
 
-
-truncate("What I'd like to tell on this topic is:", 20);
-truncate("Hi everyone!", 20);
+alert(sumInput());
